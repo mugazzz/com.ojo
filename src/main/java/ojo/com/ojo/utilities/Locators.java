@@ -36,7 +36,7 @@ public class Locators {
 	public static final By CUS_FULL_NAME = By.id("fullname_cl");
 	public static final By CUS_TRADE_NAME = By.id("ojo_tradingname_c");
 	public static final By CUS_FULL_NAME_I = By.id("fullname_i");
-	public static final By CUS_FULL_NAME_CFN = By.className("ui-dialog-buttonset");
+	public static final By CUS_FULL_NAME_CFN = By.className("ui-button-text");
 	public static final By CUS_ADDRESS_TYPE = By.id("etel_customeraddresstypecode");
 	public static final By CUS_ADDRESS_TYPE_SEL = By.id("etel_customeraddresstypecode_i");
 	public static final By NEW_ACQUISITION = By.id("contact|NoRelationship|Form|etel.contact.Acquisition.Button");
@@ -50,7 +50,18 @@ public class Locators {
 	//ORDER
 	public static final By ORDER_MENU = By.id("contact|NoRelationship|Form|orjo.contact.Button4.Button");
 	public static final By ADD_ITEM = By.className("actionButton");
-	
+	public static final By MOBILE_OFFER_DROPDOWN = By.xpath("//div[2]/div[2]/div/div/a");
+	public static final By RESIDENTAIL_DROPDOWN = By.xpath("//div[2]/div/div[2]/div[2]/div/a");
+	public static final By POSTPAID_DROPDOWN = By.xpath("//div[2]/div[2]/div[2]/div/div/a");	
+	public static final By ORRANGE_OFF_DROPDOWN = By.xpath("//div[8]/div/span/div/table/tbody/tr/td/a/span/span");
+	public static final By OFFER_NEXT_BUTTON =By.xpath("//span[contains(.,'next')]");
+	public static final By SELECT_CATEGORY =By.name("category");
+	public static final By SELECT_SHOP_ID =By.name("shopId");
+	public static final By NEXT_SHOP_BTN = By.xpath("//span[contains(.,'next')]");
+	public static final By ORANGE_20D = By.xpath("//tr[3]/td/table/tbody/tr/td/form/div[2]/div/div/div/div/span/input");
+	public static final By SIM_Card_NO = By.xpath("//tr[2]/td/table/tbody/tr/td/form/div[2]/div/div/div[3]/div/div/div/input");
+	public static final By MSISDN  = By.xpath("//span[5]/span/table/tbody/tr[3]/td/table/tbody/tr/td/form/div[2]/div/div/div[3]/div/div/div/input");
 	
 	
 }
+//a[contains(@href, './contractSelection?9-1.ILinkListener-multiClassificationsPanel-classificationTree-subtree-branches-2-subtree-branches-1-node-junction')]

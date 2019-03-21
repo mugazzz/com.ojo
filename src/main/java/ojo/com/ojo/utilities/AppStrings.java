@@ -23,4 +23,9 @@ public class AppStrings {
 	public static String Identification_Number = Double.toString(RIdentification_Number);
 	public static String Cus_City = "Jordan";
 	
+	//ORDER CREATION
+	public static String Category_Type = "Others";
+	public static String Shop_Id = "10000140";
+	public static String SIM_NO = "8996277010159065164";
+	
 }

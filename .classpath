@@ -24,5 +24,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Users/mugazp/git/ojo/src/drivers/poi-4.0.1.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

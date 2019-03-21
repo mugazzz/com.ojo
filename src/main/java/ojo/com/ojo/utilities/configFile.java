@@ -4,6 +4,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
@@ -74,9 +75,9 @@ public class configFile extends Helpers{
 		//clickOnElement(CUS_FULL_NAME);
 		//clickOnElement(CUS_FULL_NAME_I);
 		enter_Text(CUS_FULL_NAME, CUS_FULL_NAME_I, Cus_First_Name+Cus_Last_Name);
-//		if(elementExists(CUS_FULL_NAME_CFN)){
-//			clickOnElement(CUS_FULL_NAME_CFN);
-//		}
+		if(elementExists(CUS_FULL_NAME_CFN)){
+			clickOnElement(CUS_FULL_NAME_CFN);
+		}
 		clickOnElement(CUS_ADDRESS_TYPE);
 		Select drpaddress = new Select(driver.findElement(CUS_ADDRESS_TYPE_SEL));
 		drpaddress.selectByVisibleText(Address_Type);
@@ -99,11 +100,50 @@ public class configFile extends Helpers{
 		String Customer_number = order_url.substring((order_url.length() - 20), order_url.length());
 		System.out.println("Account number is: "+Customer_number);
 		clickOnElement(ADD_ITEM);
-	}
+		
+	    //Click Mobile Offers
+		clickOnElement(MOBILE_OFFER_DROPDOWN); 
+		System.out.println("1");
+		
+	    //Residential
+		clickOnElement(RESIDENTAIL_DROPDOWN);
+		System.out.println("2");
+	    //Postpaid
+		clickOnElement(POSTPAID_DROPDOWN);
+		System.out.println("3");
+		
+		clickOnElement(ORRANGE_OFF_DROPDOWN);
+		System.out.println("4");
+		
+		sleep(2000);
+		clickOnElement(OFFER_NEXT_BUTTON);
+		System.out.println("5");
+		
+		//Select Category
+		waitForVisibilityOfElement(SELECT_CATEGORY);
+        Select drpCategory = new Select(driver.findElement(SELECT_CATEGORY));
+        drpCategory.selectByVisibleText(Category_Type);
+   
+        //Select ShopId
+        Select drpshopId = new Select(driver.findElement(SELECT_SHOP_ID));
+        drpshopId.selectByVisibleText(Shop_Id);
+        clickOnElement(NEXT_SHOP_BTN);
+        
+        //Select ORANGE_20D
+        clickOnElement(ORANGE_20D);
+        
+        //Enter Sim card number
+        waitForVisibilityOfElement(SIM_Card_NO); 
+        enter_text(SIM_Card_NO, SIM_NO);
+        
+        waitForVisibilityOfElement(MSISDN); 
+
+	     }
+
 	
 	//------------CLOSE DRIVER PROCESS --------------
 	
 	public static void tearDown() {
-		driver.quit();
+		//driver.quit();
 	}
 }
