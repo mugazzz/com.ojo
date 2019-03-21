@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="ojo.com.ojo.RunFile">
+        <methods>
+          <include name="Login_Process"/>
+          <include name="CloseAll"/>
+          <include name="Enter_Cus_Details"/>
+          <include name="Open_Browser"/>
+          <include name="Order_Process"/>
+          <include name="Select_Services"/>
+        </methods>
+      </class> <!-- ojo.com.ojo.RunFile -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

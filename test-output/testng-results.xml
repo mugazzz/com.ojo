@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="152262" started-at="2019-03-21T09:53:22Z" finished-at="2019-03-21T09:55:54Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="152262" started-at="2019-03-21T09:53:22Z" finished-at="2019-03-21T09:55:54Z">
+      <class name="ojo.com.ojo.RunFile">
+        <test-method status="PASS" signature="Open_Browser()[pri:0, instance:ojo.com.ojo.RunFile@27efef64]" name="Open_Browser" is-config="true" duration-ms="20209" started-at="2019-03-21T09:53:22Z" finished-at="2019-03-21T09:53:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Open_Browser -->
+        <test-method status="PASS" signature="Login_Process()[pri:0, instance:ojo.com.ojo.RunFile@27efef64]" name="Login_Process" duration-ms="46525" started-at="2019-03-21T09:53:42Z" finished-at="2019-03-21T09:54:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login_Process -->
+        <test-method status="PASS" signature="Select_Services()[pri:1, instance:ojo.com.ojo.RunFile@27efef64]" name="Select_Services" duration-ms="50275" started-at="2019-03-21T09:54:28Z" finished-at="2019-03-21T09:55:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Select_Services -->
+        <test-method status="PASS" signature="Enter_Cus_Details()[pri:2, instance:ojo.com.ojo.RunFile@27efef64]" name="Enter_Cus_Details" duration-ms="12711" started-at="2019-03-21T09:55:19Z" finished-at="2019-03-21T09:55:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Enter_Cus_Details -->
+        <test-method status="PASS" signature="Order_Process()[pri:3, instance:ojo.com.ojo.RunFile@27efef64]" name="Order_Process" duration-ms="21762" started-at="2019-03-21T09:55:31Z" finished-at="2019-03-21T09:55:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Order_Process -->
+        <test-method status="PASS" signature="CloseAll()[pri:0, instance:ojo.com.ojo.RunFile@27efef64]" name="CloseAll" is-config="true" duration-ms="753" started-at="2019-03-21T09:55:53Z" finished-at="2019-03-21T09:55:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseAll -->
+      </class> <!-- ojo.com.ojo.RunFile -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
