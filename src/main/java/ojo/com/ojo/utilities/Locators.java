@@ -9,6 +9,7 @@ public class Locators {
 	public static final By USER_PASSWORD = By.id("passwordInput");
 	public static final By SUBMIT = By.id("submitButton");
 	public static final By LOADER = By.id("DialogLoadingDivImg");
+	public static final By LOADER_PANEL = By.id("loading-indicator");
 	
 	//DASHBOARD SCREEN
 	
@@ -36,6 +37,7 @@ public class Locators {
 	public static final By CUS_FULL_NAME = By.id("fullname_cl");
 	public static final By CUS_TRADE_NAME = By.id("ojo_tradingname_c");
 	public static final By CUS_FULL_NAME_I = By.id("fullname_i");
+	public static final By CUS_FULL_NAME_FLY = By.id("fullname_compositionLinkControl_flyoutLoadingArea");
 	public static final By CUS_FULL_NAME_CFN = By.className("ui-button-text");
 	public static final By CUS_ADDRESS_TYPE = By.id("etel_customeraddresstypecode");
 	public static final By CUS_ADDRESS_TYPE_SEL = By.id("etel_customeraddresstypecode_i");
@@ -58,10 +60,25 @@ public class Locators {
 	public static final By SELECT_CATEGORY =By.name("category");
 	public static final By SELECT_SHOP_ID =By.name("shopId");
 	public static final By NEXT_SHOP_BTN = By.xpath("//span[contains(.,'next')]");
-	public static final By ORANGE_20D = By.xpath("//tr[3]/td/table/tbody/tr/td/form/div[2]/div/div/div/div/span/input");
+	//public static final By ORANGE_20D = By.xpath("//tr[3]/td/table/tbody/tr/td/form/div[2]/div/div/div/div/span/input");
+	public static final By ORANGE_20D = By.xpath("//span[text()='Orange20 D']");
 	public static final By SIM_Card_NO = By.xpath("//tr[2]/td/table/tbody/tr/td/form/div[2]/div/div/div[3]/div/div/div/input");
 	public static final By MSISDN  = By.xpath("//span[5]/span/table/tbody/tr[3]/td/table/tbody/tr/td/form/div[2]/div/div/div[3]/div/div/div/input");
+	public static final By MSISDN_SEARCH =By.xpath("//*[@class='buttonLink' and text()='search']");
+	public static final By SELECT_MSISDN = By.xpath("//table[@class='GFJVEQUBCB']//td[1]//span");
+	public static final By SELECT_MSISDN_INPUTFIELD = By.xpath("//span[5]/span/table/tbody/tr[3]/td/table/tbody/tr/td/form/div[2]/div/div/div[3]/div/div/div/input");
+	
+	public static final By IDENT_DOCUMENT_CHECKBOX= By.xpath("//div[2]/input");
+	public static final By APPLICATION_FORM_CHECKBOX= By.xpath("//div[3]/input");
+	public static final By FINALIZE_BASKET= By.xpath("//span[contains(.,'Finalize basket')]");
+	public static final By CONTRACT_UPLOAD= By.name("lettersPanel:clientSignature");
+	public static final By CONFIRM_ORDER= By.xpath("//span[contains(.,'confirm order')]");
+	
+	//CONFIRMATION HOME SCREEN
+	public static final By OFFER_INTALLED_TABLE= By.id("installedOfferSelection");
+	public static final By ORDER_ID = By.xpath("//div[8]/div/div/table/tbody/tr/td[2]/span");
+	public static final By ORDER_STATUS = By.xpath("//div[8]/div/div/table/tbody/tr/td[4]/span");
+	
 	
 	
 }
-//a[contains(@href, './contractSelection?9-1.ILinkListener-multiClassificationsPanel-classificationTree-subtree-branches-2-subtree-branches-1-node-junction')]

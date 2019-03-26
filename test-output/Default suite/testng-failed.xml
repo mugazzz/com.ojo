@@ -5,7 +5,6 @@
     <classes>
       <class name="ojo.com.ojo.RunFile">
         <methods>
-          <include name="Login_Process"/>
           <include name="CloseAll"/>
           <include name="Enter_Cus_Details"/>
           <include name="Open_Browser"/>

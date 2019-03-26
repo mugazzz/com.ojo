@@ -7,7 +7,9 @@ import static ojo.com.ojo.utilities.configFile.*;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -29,8 +31,7 @@ public class Helpers{
 	}
 	
 	public static boolean elementExists(By locator) {
-        implicitWait(2);
-        try {
+		try {
             driver.findElement(locator);
             return true;
         } catch (NoSuchElementException e) {
@@ -48,14 +49,14 @@ public class Helpers{
         Thread.sleep(time);
     }
     
-    public void waitForProgressBarToDismiss() {
+    public static void waitForProgressBarToDismiss() {
         try {
             sleep(500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        if (elementExists(LOADER)) {
-            waitForVisibilityOfElement(LOADER);
+        if (elementExists(LOADER_PANEL)) {
+            waitForVisibilityOfElement(LOADER_PANEL);
         }
     }
     
@@ -70,4 +71,28 @@ public class Helpers{
 		actions.moveToElement(element);
 		actions.perform();
 	}
+	
+	public static void waitForPageToLoad(WebDriver driver, int timeOutInSeconds) {
+        try {
+               driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+               Thread.sleep(2000);
+               JavascriptExecutor js = (JavascriptExecutor) driver;
+               String command = "return document.readyState";
+               // Check the readyState before doing any waits
+               if (js.executeScript(command).toString().equals("complete")) {
+            	   System.out.println("-------Page loading------------");
+                     return;
+               }
+               for (int i = 0; i < timeOutInSeconds; i++) {
+                     if (js.executeScript(command).toString().equals("complete")) {
+                    	 System.out.println("-------Page load completed-----------");
+                            break;
+                     }
+                     Thread.sleep(1000);
+               }
+        } catch (Exception e) {
+              
+        }
+ }
+
 }
